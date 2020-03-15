@@ -6,20 +6,20 @@ public abstract class Animal implements Actions {
         return MAX_AGE;
     }
 
-    private static final int MAX_AGE = 5;
+    public static final int MAX_AGE = 5;
 
     public int getMIN_HEALTH_POINT() {
         return MIN_HEALTH_POINT;
     }
 
-    private static final int MIN_HEALTH_POINT = 0;
+   public static final int MIN_HEALTH_POINT = 0;
 
-    public int healthPoint;
-    public int happiness;
-    public int satiety;
-    public double age;
-    public int purity;
-    public boolean isItSick;
+    private int healthPoint;
+    private int happiness;
+    private int satiety;
+    private double age;
+    private int purity;
+    private boolean isItSick;
 
 
     public Animal() {
@@ -33,12 +33,12 @@ public abstract class Animal implements Actions {
 
     @Override
     public void toFeed() {
-        this.healthPoint += 2;
-        this.happiness += 1;
-        this.satiety += 10;
-        this.age += 0.2;
-        this.purity -= 2;
-        this.check_stage(); //have to be static...
+        healthPoint += 2;
+        happiness += 1;
+        satiety += 10;
+        age += 0.2;
+        purity -= 2;
+        check_stage(); //have to be static...
 
     }
 
