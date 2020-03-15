@@ -2,8 +2,17 @@ package demo;
 
 
 public abstract class Animal implements Actions {
-    protected int MAX_AGE = 5;
-    protected int MIN_HEALTH_POINT = 0;
+    public int getMAX_AGE() {
+        return MAX_AGE;
+    }
+
+    private static final int MAX_AGE = 5;
+
+    public int getMIN_HEALTH_POINT() {
+        return MIN_HEALTH_POINT;
+    }
+
+    private static final int MIN_HEALTH_POINT = 0;
 
     public int healthPoint;
     public int happiness;
@@ -11,29 +20,6 @@ public abstract class Animal implements Actions {
     public double age;
     public int purity;
     public boolean isItSick;
-
-    public void check_stage() {
-        try {
-            if (this.healthPoint <= MIN_HEALTH_POINT) {
-                throw new PetDiedException();
-            }
-            if (this.age<= MAX_AGE){
-                throw new PetGrewUpException();
-            }
-        } catch (PetDiedException e) {
-            System.out.println("Your pet is dead. Game over.");
-
-
-        } catch (PetGrewUpException e) {
-            System.out.println("Congratulations! Your pet has been grew up! \n Game over.");
-
-        }
-            if (this.healthPoint < 20) {
-                System.out.println("I'm feeling badly, maybe I have a cold...");
-                this.healthPoint -= 4; //decrease healthPoints because of illness
-            }
-
-        }
 
 
     public Animal() {
@@ -79,6 +65,21 @@ public abstract class Animal implements Actions {
     @Override
     public void toHeal() {
 
+    }
+
+    public void check_stage() throws PetDiedException,PetGrewUpException {
+        try {
+            if (this.healthPoint <= MIN_HEALTH_POINT) {
+                throw new PetDiedException("Your pet is dead. Game over.");
+            }
+            if (this.age<= MAX_AGE){
+                throw new PetGrewUpException("Congratulations! Your pet has been grew up! \n Game over.");
+            }
+        } catch (PetDiedException e) {
+
+        } catch (PetGrewUpException e) {
+
+        }
     }
 
 
