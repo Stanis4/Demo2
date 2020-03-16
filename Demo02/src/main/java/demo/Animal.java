@@ -2,17 +2,12 @@ package demo;
 
 
 public abstract class Animal implements Actions {
-    public int getMAX_AGE() {
-        return MAX_AGE;
-    }
-
     public static final int MAX_AGE = 5;
-
-    public int getMIN_HEALTH_POINT() {
-        return MIN_HEALTH_POINT;
-    }
-
-   public static final int MIN_HEALTH_POINT = 0;
+    public static final int MAX_HEALTH_POINT = 50;
+    public static final int MAX_HAPPINESS = 10;
+    public static final int MAX_SATIETY = 50;
+    public static final int MAX_PURITY = 10;
+    public static final int MIN_HEALTH_POINT = 0;
 
     private int healthPoint;
     private int happiness;
@@ -32,7 +27,7 @@ public abstract class Animal implements Actions {
     }
 
     @Override
-    public void toFeed() {
+    public void toFeed() throws PetGrewUpException, PetDiedException {
         healthPoint += 2;
         happiness += 1;
         satiety += 10;
@@ -67,20 +62,39 @@ public abstract class Animal implements Actions {
 
     }
 
-    public void check_stage() throws PetDiedException,PetGrewUpException {
-        try {
-            if (this.healthPoint <= MIN_HEALTH_POINT) {
-                throw new PetDiedException("Your pet is dead. Game over.");
-            }
-            if (this.age<= MAX_AGE){
-                throw new PetGrewUpException("Congratulations! Your pet has been grew up! \n Game over.");
-            }
-        } catch (PetDiedException e) {
-
-        } catch (PetGrewUpException e) {
-
+    public void check_stage() throws PetDiedException, PetGrewUpException {
+        if (healthPoint <= MIN_HEALTH_POINT) {
+            throw new PetDiedException("Your pet is dead. Game over.");
+        }
+        if (age > MAX_AGE) {
+            throw new PetGrewUpException("Congratulations! Your pet has been grew up! \n Game over.");
         }
     }
+
+
+
+    public int getHealthPoint() {
+        return healthPoint;
+    }
+
+    public int getHappiness() {
+        return happiness;
+    }
+
+    public int getSatiety() {
+        return satiety;
+    }
+
+    public double getAge() {
+        return age;
+    }
+
+    public int getPurity() {
+        return purity;
+    }
+
+
+
 
 
 }
