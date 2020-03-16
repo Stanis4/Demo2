@@ -10,7 +10,7 @@ public class Run extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("static/sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("static/TamagochiView.fxml"));
         primaryStage.setTitle("Tamagochi");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();

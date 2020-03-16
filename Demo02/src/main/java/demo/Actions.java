@@ -1,7 +1,7 @@
 package demo;
 
 public interface Actions {
-    void toFeed();
+    void toFeed() throws PetGrewUpException, PetDiedException;
     void toPlay();
     void toScold();
     void toStroke();
