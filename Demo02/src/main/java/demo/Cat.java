@@ -1,7 +1,7 @@
 package demo;
 
 public class Cat extends Animal {
-    Cat() {
+    public Cat() {
         super();
 
     }
