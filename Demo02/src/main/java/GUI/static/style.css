@@ -1,0 +1,52 @@
+.button_actions{
+-fx-background-color: #33ff69;
+-fx-background-radius: 100px;
+-fx-font-family:"Comic Sans MS";
+-fx-font-size: 18px;
+-fx-text-fill: #0e2b02;
+-fx-border-color: #e3fa5f;
+-fx-border-width: 5px;
+-fx-border-radius: 100px;
+}
+
+
+.button_actions:hover{
+-fx-background-color: #e3fa5f;
+-fx-background-radius: 100px;
+-fx-font-family:"Comic Sans MS";
+-fx-font-size: 18px;
+-fx-text-fill: #0e2b02;
+-fx-border-color: #33ff69;
+-fx-border-width: 5px;
+-fx-border-radius: 100px;
+}
+
+
+
+.button_actions:pressed{
+-fx-background-color: #084003;
+-fx-border-color: #e3fa5f;
+-fx-text-fill: #e3fa5f;
+}
+
+
+.progress_bar .track{
+-fx-background-color: #c8ffb3;
+-fx-background-radius: 100px;
+-fx-border-width: 1px;
+-fx-border-color: #e3fa5f;
+-fx-border-radius: 100px;
+}
+
+.progress_bar .bar{
+-fx-background-color: #ffea00;
+-fx-background-radius: 100px;
+
+}
+
+.label_progress{
+-fx-font-family:"Comic Sans MS";
+-fx-font-size: 15px;
+-fx-text-fill: #0e2b02;
+	
+}

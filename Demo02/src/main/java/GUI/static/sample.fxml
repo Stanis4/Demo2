@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="677.0" style="-fx-background-color: #dbb8da;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controller">
+   <children>
+      <AnchorPane layoutX="24.0" layoutY="31.0" prefHeight="107.0" prefWidth="643.0">
+         <children>
+            <Group>
+               <children>
+                  <Label layoutX="4.0" layoutY="-11.0" styleClass="label_progress" stylesheets="@style.css" text="Health " />
+                  <ProgressBar fx:id="health" layoutY="12.0" prefWidth="200.0" progress="0.5" styleClass="progress_bar" stylesheets="@style.css" />
+               </children>
+            </Group>
+            <Group layoutY="43.0">
+               <children>
+                  <Label layoutX="4.0" layoutY="-11.0" styleClass="label_progress" stylesheets="@style.css" text="Hapipiness" />
+                  <ProgressBar fx:id="happiness" layoutY="12.0" prefWidth="200.0" progress="0.5" styleClass="progress_bar" stylesheets="@style.css" />
+               </children>
+            </Group>
+            <Group layoutY="87.0">
+               <children>
+                  <Label layoutX="4.0" layoutY="-11.0" styleClass="label_progress" stylesheets="@style.css" text="Satiety" />
+                  <ProgressBar fx:id="satiety" layoutY="12.0" prefWidth="200.0" progress="0.5" styleClass="progress_bar" stylesheets="@style.css" />
+               </children>
+            </Group>
+            <Group layoutX="443.0">
+               <children>
+                  <Label layoutX="4.0" layoutY="-11.0" styleClass="label_progress" stylesheets="@style.css" text="Age" />
+                  <ProgressBar fx:id="age" layoutY="12.0" prefWidth="200.0" progress="0.0" styleClass="progress_bar" stylesheets="@style.css" />
+               </children>
+            </Group>
+            <Group layoutX="443.0" layoutY="43.0">
+               <children>
+                  <Label layoutX="4.0" layoutY="-11.0" styleClass="label_progress" stylesheets="@style.css" text="Purity" />
+                  <ProgressBar fx:id="purity" layoutY="12.0" prefWidth="200.0" progress="0.0" styleClass="progress_bar" stylesheets="@style.css" />
+               </children>
+            </Group>
+         </children>
+      </AnchorPane>
+      <Button layoutX="5.0" layoutY="333.0" mnemonicParsing="false" onAction="#toScoldButton" prefHeight="95.0" prefWidth="95.0" styleClass="button_actions" stylesheets="@style.css" text="Scold">
+         <font>
+            <Font name="Comic Sans MS" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button layoutX="5.0" layoutY="430.0" mnemonicParsing="false" onAction="#toWashButton" prefHeight="95.0" prefWidth="95.0" styleClass="button_actions" stylesheets="@style.css" text="Wash">
+         <font>
+            <Font name="Comic Sans MS" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button layoutX="577.0" layoutY="235.0" mnemonicParsing="false" onAction="#toPlayButton" prefHeight="95.0" prefWidth="95.0" styleClass="button_actions" stylesheets="@style.css" text="Play">
+         <font>
+            <Font name="Comic Sans MS" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button layoutX="577.0" layoutY="430.0" mnemonicParsing="false" onAction="#toHealButton" prefHeight="95.0" prefWidth="95.0" styleClass="button_actions" stylesheets="@style.css" text="Heal">
+         <font>
+            <Font name="Comic Sans MS" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button layoutX="577.0" layoutY="333.0" mnemonicParsing="false" onAction="#toStrokeButton" prefHeight="95.0" prefWidth="95.0" styleClass="button_actions" stylesheets="@style.css" text="Stroke">
+         <font>
+            <Font name="Comic Sans MS" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button layoutX="5.0" layoutY="235.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#toFeedButton" prefHeight="95.0" prefWidth="95.0" styleClass="button_actions" stylesheets="@style.css" text="Feed">
+         <font>
+            <Font name="Comic Sans MS" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <AnchorPane layoutX="160.0" layoutY="193.0" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="186.0" AnchorPane.topAnchor="193.0">
+         <children>
+            <ImageView fx:id="catImage" fitHeight="323.0" fitWidth="331.0">
+               <image>
+                  <Image url="@img/start.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
